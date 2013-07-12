@@ -28,6 +28,7 @@ def main(nasdaq):
     while start < end:
         print name[start],
         start+=1
+    html_data.close()
 
     #Printing share_value which was saved ti share_value
     print '\n'+'Current share price of company '+nasdaq+': '+share_value.read()
