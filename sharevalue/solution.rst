@@ -13,7 +13,8 @@ This program will print the current share price of the company whose NASDAQ valu
 Code
 ----
 
-::
+.. code:: python
+   :number-lines:
 
     #!/usr/bin/env python
 
@@ -66,18 +67,13 @@ Example output
 Here some example output is given below::
 
     $ ./sharevalue.py ORCL
-
     Fetching data from: http://download.finance.yahoo.com/d/quotes.csv?s=ORCL&f=l1
-
     Current share price of company ORCL: 31.9449
 
     $ ./sharevalue.py GOOG
-
     Fetching data from: http://download.finance.yahoo.com/d/quotes.csv?s=GOOG&f=l1
-
     Current share price of company GOOG: 919.27
 
     $./sharevalue.py GOOG ORCL
-
     Syntax: ./sharevalue.py [NASDAQ Symbol]
 
