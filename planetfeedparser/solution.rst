@@ -114,7 +114,7 @@ Run the above script like::
 
 or::
 
-    $ python planetparser.py http://planet.fedoraproject.org/rss20.xml
+    $ python planetfeedparser.py http://planet.fedoraproject.org/rss20.xml
 
 
 Example output

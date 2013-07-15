@@ -1,1 +1,4 @@
-1st assignment: Print /proc/mounts. See mounts
+1st Assignment: Print exactly that which mount command does in terminal
+2nd Assignment: Print share value from a given NASDAQ symbol
+3rd Assignment: Print Post titles and authors from http://planet.fedora.org/
+4th Assignment: Do the same as 3rd but using feedparser module
