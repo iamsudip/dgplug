@@ -2,3 +2,6 @@
 2nd Assignment: Print share value from a given NASDAQ symbol
 3rd Assignment: Print Post titles and authors from http://planet.fedora.org/
 4th Assignment: Do the same as 3rd but using feedparser module
+5th Assignment: Display the users who can login.
+6th Assignment: To write two commands greet and stock: check myshellv1
+7th Assignment: Make a dummy project
