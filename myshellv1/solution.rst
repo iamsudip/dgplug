@@ -1,7 +1,6 @@
-
-=============
-userfinder v2
-=============
+==========
+myshell v1
+==========
 
 The assignment was
 
