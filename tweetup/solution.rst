@@ -14,6 +14,11 @@ Installation procedure
 
 will do the job.
 
+Link to code
+------------
+
+You can check the code `here <https://github.com/iamsudip/dgplug/blob/master/tweetup/tweetup>`_
+
 How to upload a pic?
 --------------------
 
