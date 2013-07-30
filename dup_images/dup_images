@@ -1,0 +1,50 @@
+#!/usr/bin/env python
+import os
+import sys
+import hashlib
+
+
+data = {}  # A dictionary to keep all data.
+arranged_data = {}  # A dictionary to keep data in an arranged way.
+
+def hash_it(directory):
+    """Function to generate md5 hash
+    """
+    for path, sub_directories, files in os.walk(directory):
+        # Picks each file as 'filename' and generating hash.
+        for filename in files:
+            path_to_file = os.path.join(path, filename)
+            # Appends file as key and generated md5 hash as value to 'data'.
+            data[str(path_to_file)] = hashlib.md5(open(str(path_to_file)).read()).hexdigest()
+
+def find_duplicates():
+    """Function to find duplicate files
+    """
+    # Iterates through each key and value at a time.
+    for pair in data.items():
+        if pair[1] not in arranged_data.keys():
+            # If new hash value found appends it to 'arranged_data' as key.
+            arranged_data[pair[1]] = []
+        # Keeps all the files as a list in value to the same hash(key).
+        arranged_data[pair[1]].append(pair[0])
+
+    # Iterates through the new dictionary, the files which are duplicates keeps them as a list.
+    dup_list = [files for hashes, files in arranged_data.items() if len(files) > 1]
+
+    # A simple counter to count no. of duplicate files.
+    count = 1
+    # Iterates through each list and prints them.
+    for files in dup_list:
+        print str(count) + '.'
+        for dup_file in files:
+            print dup_file
+        count += 1
+
+if __name__ == '__main__':
+    for i in range(1,len(sys.argv)):
+        if os.path.exists(sys.argv[i]):
+            hash_it(sys.argv[i])
+        else:
+            print "Wrong path: %s" %(sys.argv[i])
+    find_duplicates()
+    sys.exit(0)
