@@ -1,0 +1,17 @@
+
+  {% extends "master.html" %}
+ 
+  {% block title %}Home{% endblock %}
+ 
+  {% block body %}
+
+  <a href="{{ url_for('log', log_id = '167') }}">dgplug_16th_august.log</a>
+  <br>
+  <a href="{{ url_for('log', log_id = '177') }}">dgplug_17th_august.log</a>
+  <br>
+  <a href="{{ url_for('log', log_id = '187') }}">dgplug_18th_august.log</a>
+  <br>
+  <a href="{{ url_for('log', log_id = '257') }}">dgplug_25th_august.log</a>
+
+  {% endblock %}
+
