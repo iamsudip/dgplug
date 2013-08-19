@@ -15,11 +15,9 @@ def load():
             datas = getoutput("uptime")
             data = datas.split(', ')
             data[2] = data[2].split(': ')[1]
-            #print data
             c.execute("INSERT INTO loadaverages VALUES (?, ?, ?, ?, ?)", data)
             conn.commit()
             sleep(1)
-            print data[2]
     except:
         getoutput("rm -rf loadavgs.db")
         c.close()
